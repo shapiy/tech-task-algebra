@@ -6,8 +6,6 @@
 ;; (optimize '(+ 10 (* x 0))) => 10
 ;; (optimize '(+ x (- y 0))) => '(+ x y)
 
-;; (->javascript "example" '(+ 1 (* x x))) =>
-
 (deftest evaluate-test
   (testing "Happy cases"
     (is (= 4 (evaluate {} '(* 2 (+ 1 1)))))
