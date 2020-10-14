@@ -30,8 +30,8 @@
     (is (= "function anotherExample(x, y) { return (1 - (x / y)); }"
            (->javascript "anotherExample" '(- 1 (/ x y))))))
 
-  #_(testing "Invalid operation"
+  (testing "Invalid operation"
     (is (= {:error "Invalid inputs"} (->javascript "example" '(42 x x)))))
 
-  #_(testing "Unary operation is not supported"
+  (testing "Unary operation is not supported"
     (is (= {:error "Invalid inputs"} (->javascript "example" '(* x))))))
