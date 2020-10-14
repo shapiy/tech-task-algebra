@@ -1,8 +1,8 @@
 (ns algebra.core
-  (:require [clojure.walk :as walk]
+  (:require [clojure.string :as string]
+            [clojure.walk :as walk]
             [medley.core :refer :all]
-            [schema.core :as s]
-            [clojure.string :as string])
+            [schema.core :as s])
   (:import (clojure.lang ExceptionInfo)))
 
 (declare Equation)
